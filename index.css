@@ -7,7 +7,6 @@ html {
   
   p {
     font-size: 50px;
-    line-height: 10;
     letter-spacing: 1px;
     text-align: center;
     color: white;
@@ -16,7 +15,7 @@ html {
   
   
   html {
-    background-color: rgba(0, 0, 0, 0.979);
+    background-color: rgba(3, 3, 3, 1);
     background-image: url('images/background.jpg');
     background-repeat: no-repeat;
     background-position: center;
