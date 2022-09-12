@@ -16,7 +16,7 @@ html {
   
   
   html {
-    background-color: black;
+    background-color: rgba(0, 0, 0, 0.979);
     background-image: url('images/background.jpg');
     background-repeat: no-repeat;
     background-position: center;
