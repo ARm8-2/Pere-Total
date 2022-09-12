@@ -16,13 +16,12 @@ html {
   
   
   html {
-    background-image: url('fuif.png');
+    background-image: url('images/background.jpg');
     background-repeat: no-repeat;
     background-position: center;
   }
   
   body {
-    width: 800px;
     margin: 0 auto;
     padding: 20px 20px 20px 20px;
   }
