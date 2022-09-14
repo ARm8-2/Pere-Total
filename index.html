@@ -147,7 +147,7 @@
 
 </style>
 </head>
-<body>
+<body onload="scrollToTop()">
     <div id="page-container">
         <div id="content-wrap">
 
@@ -195,6 +195,10 @@
     </div>
 
 <script>
+function scrollToTop() {
+    window.scrollTo(0, 0);
+}
+
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
 }
