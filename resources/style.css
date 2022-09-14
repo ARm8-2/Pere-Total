@@ -17,7 +17,7 @@ body {
 .home {
     position: relative;
     height: 600px;
-    background-image: url("background.jpg");
+    background-image: url("resources/background.jpg");
     background-position: center;
     background-size: cover;
     box-shadow: 0 -35px 15px -15px #0a0a0a inset;
