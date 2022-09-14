@@ -1,153 +1,13 @@
 <!DOCTYPE html>
 <html>
+
 <head>
-<meta name="viewport" content="width=device-width, initial-scale=1">
-<title>Père Total</title>
-<link rel="icon" href="resources/icons/logo.png">
-<style>
-    body {
-        margin: 0;
-        font-family: Arial, Helvetica, sans-serif;
-        background-color: #0a0a0a;
-    }
-
-    #page-container {
-        position: relative;
-        min-height: 100vh;
-    }
-
-    #content-wrap {
-        padding-bottom: 2.5rem;    /* Footer height */
-    }
-
-    .sidenav {
-        height: 100%;
-        width: 0;
-        position: fixed;
-        z-index: 1;
-        top: 0;
-        left: 0;
-        background-color: #111;
-        overflow-x: hidden;
-        transition: 0.5s;
-        padding-top: 60px;
-    }
-
-    .sidenav a {
-        padding: 8px 8px 8px 32px;
-        text-decoration: none;
-        font-size: 25px;
-        color: #818181;
-        display: block;
-        transition: 0.3s;
-    }
-
-    .sidenav a:hover {
-        color: #f1f1f1;
-    }
-
-    .sidenav .closebtn {
-        position: absolute;
-        top: 0;
-        right: 25px;
-        font-size: 36px;
-        margin-left: 50px;
-    }
-
-    .home {
-        position: relative;
-        height: 600px;
-        background-image: url("resources/background.jpg");
-        background-position: center;
-        background-size: cover;
-        box-shadow: 0 -35px 15px -15px #0a0a0a inset;
-    }
-
-    .tickets {
-        position: relative;
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-bottom: 100px;
-        align-items: center;
-    }
-
-    .contact {
-        position: relative;
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-bottom: 100px;
-    }
-
-    .about {
-        position: relative;
-        padding-left: 2%;
-        padding-right: 2%;
-        padding-bottom: 100px;
-    }
-
-    footer {
-        position: absolute;
-        bottom: 0px;
-        width:100%;
-        text-align: center;
-        background-color: #333;
-        color: white;
-    }
-
-    .logo {
-        position: relative;
-        animation-name: logoslidein;
-        animation-duration: 4s;
-        display: block;
-        margin: 0 auto;
-        animation-fill-mode: forwards;
-    }
-
-    .instaicon {
-        position: absolute;
-        top: 1%;
-        right: 1%;
-    }
-
-    .navbtn {
-        position: relative;
-        background-color: rgba(255, 255, 255, 0);
-        border-color: rgba(241, 241, 241, 0);
-        top: 1%;
-        left: 1%;
-    }
-
-    @keyframes logoslidein {
-        0%   {opacity: 0; top:-400px;}
-        100% {opacity: 1; top:85px;}
-    }
-
-    p {
-        color: rgb(204, 204, 204);
-    }
-
-    h2 {
-        font-size: 50px;
-        color: rgb(204, 204, 204);
-        display: inline-block;
-    }
-
-    .ticketbutton {
-        position: absolute;
-        border-radius: 8px;
-        text-align: center;
-        font-size: 14px;
-        margin-left: 10%;
-        margin-top: 50px;
-        color: rgba(0, 0, 0, 0.8);
-        background: rgb(0, 255, 0);
-        padding: 13px 40px;
-        border-color: rgba(241, 241, 241, 0);
-    }
-
-
-</style>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <title>Père Total</title>
+    <link rel="icon" href="resources/icons/logo.png">
+    <link href="resources/style.css" rel="stylesheet" type="text/css">
 </head>
+
 <body>
     <div id="page-container">
         <div id="content-wrap">
@@ -159,27 +19,30 @@
                     <a onclick="closeNav()" href="#about">About</a>
                     <a onclick="closeNav()" href="#contact">Contact</a>
                 </div>
-                <button class="navbtn" onclick="openNav()"><img src="resources/icons/sidenav.png" alt="sidenavbtn" width="50", height="50"></button>
+                <button class="navbtn" onclick="openNav()"><img src="resources/icons/sidenav.png" alt="sidenavbtn"
+                        width="50" , height="50"></button>
                 
                 <a href="https://instagram.com/peretotal28_01?igshid=YmMyMTA2M2Y=">
-                    <img class="instaicon" alt="Instagram logo" src="resources/icons/instagram.png" width="65", height="65">
+                    <div class="scroller"><span><br />Follow us<br /><br />@peretotal28_01</span></div>
+                    <img class="instaicon" alt="Instagram logo" src="resources/icons/instagram.png" width="65" ,
+                        height="65">
                 </a>
                 <a href="https://www.youtube.com/watch?v=dQw4w9WgXcQ">
-                    <img class="logo" alt="Père Total" src="resources/icons/logo.png" width="250", height="250">
+                    <img class="logo" alt="Père Total" src="resources/icons/logo.png" width="250" , height="250">
                 </a>
             </div>
 
             <div class="tickets" id="tickets">
                 <h2>Tickets</h2>
-                <button class="ticketbutton">BUY</button>
-                <p>info bout the tickets, idk yet... 
+                <button class="ticketbutton" onclick="location.href='https://google.com'">BUY</button>
+                <p>info bout the tickets, idk yet...
                     but it has le big boutunnn
                 </p>
             </div>
 
             <div class="about" id="about">
                 <h2>About</h2>
-                <p>Some other info like date, place, planning, idk yet i should prob just stop coding when im half awake and about to pass out cuz of sleep deprevation but i couldn't rlly give a fuck</p>
+                <p>Some other info like date, place, planning</p>
             </div>
 
             <div class="contact" id="contact">
@@ -194,20 +57,21 @@
         </div>
     </div>
 
-<script>
-window.onbeforeunload = function () {
-    window.scrollTo(0,0);
-};
+    <script>
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
 
-function openNav() {
-    document.getElementById("mySidenav").style.width = "250px";
-}
-  
-function closeNav() {
-    document.getElementById("mySidenav").style.width = "0";
-}
+        function openNav() {
+            document.getElementById("mySidenav").style.width = "250px";
+        }
 
-</script>
+        function closeNav() {
+            document.getElementById("mySidenav").style.width = "0";
+        }
+
+    </script>
 
 </body>
+
 </html>

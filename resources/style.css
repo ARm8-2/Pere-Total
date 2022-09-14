@@ -1,0 +1,193 @@
+body {
+    margin: 0;
+    font-family: Arial, Helvetica, sans-serif;
+    background-color: #0a0a0a;
+}
+
+#page-container {
+    position: relative;
+    min-height: 100vh;
+}
+
+#content-wrap {
+    padding-bottom: 2.5rem;
+    /* Footer height */
+}
+
+.home {
+    position: relative;
+    height: 600px;
+    background-image: url("background.jpg");
+    background-position: center;
+    background-size: cover;
+    box-shadow: 0 -35px 15px -15px #0a0a0a inset;
+    align-items: center;
+}
+
+.navbtn {
+    position: relative;
+    background-color: rgba(255, 255, 255, 0);
+    border-color: rgba(241, 241, 241, 0);
+    top: 1%;
+    left: 1%;
+    align-items: center;
+}
+
+.sidenav {
+    height: 100%;
+    width: 0;
+    position: fixed;
+    z-index: 1;
+    top: 0;
+    left: 0;
+    background-color: #111;
+    overflow-x: hidden;
+    transition: 0.5s;
+    padding-top: 60px;
+    align-items: center;
+}
+
+.sidenav a {
+    padding: 8px 8px 8px 32px;
+    text-decoration: none;
+    font-size: 25px;
+    color: #818181;
+    display: block;
+    transition: 0.3s;
+}
+
+.sidenav a:hover {
+    color: #f1f1f1;
+}
+
+.sidenav .closebtn {
+    position: absolute;
+    top: 0;
+    right: 25px;
+    font-size: 36px;
+    margin-left: 50px;
+}
+
+.logo {
+    position: relative;
+    animation-name: logoslidein;
+    animation-duration: 4s;
+    display: block;
+    margin: 0 auto;
+    animation-fill-mode: forwards;
+}
+
+@keyframes logoslidein {
+    0% {
+        opacity: 0;
+        top: -400px;
+    }
+
+    100% {
+        opacity: 1;
+        top: 85px;
+    }
+}
+
+.instaicon {
+    position: absolute;
+    top: 1%;
+    right: 1%;
+}
+
+.scroller {
+    height: 1.2em;
+    line-height: 2em;
+    position: absolute;
+    overflow: hidden;
+    top: 4.5%;
+    right: 10%;
+    width: 10em;
+}
+
+.scroller>span {
+    float: right;
+    text-align: right;
+    position: absolute;
+    top: 0;
+    left: 0;
+    margin-bottom: 20px;
+    animation: slide 5s infinite;
+    animation-delay: 6s;
+    font-weight: bold;
+    font-size: 15px;
+    color: #ffffff;
+}
+
+@keyframes slide {
+    0% {
+        top: 0;
+    }
+
+    25% {
+        top: -20px;
+    }
+
+    50% {
+        top: -40px;
+    }
+
+    75% {
+        top: -105px;
+    }
+}
+
+.tickets {
+    position: relative;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 100px;
+    align-items: center;
+}
+
+.ticketbutton {
+    position: absolute;
+    border-radius: 8px;
+    text-align: center;
+    font-size: 14px;
+    margin-left: 10%;
+    margin-top: 50px;
+    color: rgba(0, 0, 0, 0.8);
+    background: rgb(0, 255, 0);
+    padding: 13px 40px;
+    border-color: rgba(241, 241, 241, 0);
+}
+
+.contact {
+    position: relative;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 100px;
+}
+
+.about {
+    position: relative;
+    padding-left: 2%;
+    padding-right: 2%;
+    padding-bottom: 100px;
+}
+
+footer {
+    position: absolute;
+    bottom: 0px;
+    width: 100%;
+    text-align: center;
+    background-color: #333;
+    color: white;
+}
+
+p {
+    color: rgb(204, 204, 204);
+}
+
+h2 {
+    font-size: 50px;
+    color: rgb(204, 204, 204);
+    display: inline-block;
+    margin-left: 1%;
+}
