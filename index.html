@@ -60,6 +60,7 @@
         background-image: url("resources/background.jpg");
         background-position: center;
         background-size: cover;
+        box-shadow: 0 -35px 15px -15px #0a0a0a inset;
     }
 
     .tickets {
@@ -147,10 +148,9 @@
 
 </style>
 </head>
-<body onload="scrollToTop()">
+<body>
     <div id="page-container">
         <div id="content-wrap">
-
             <div class="home" id="home">
                 <div id="mySidenav" class="sidenav">
                     <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
@@ -195,9 +195,9 @@
     </div>
 
 <script>
-function scrollToTop() {
-    window.scrollTo(0, 0);
-}
+window.onbeforeunload = function () {
+    window.scrollTo(0,0);
+};
 
 function openNav() {
     document.getElementById("mySidenav").style.width = "250px";
