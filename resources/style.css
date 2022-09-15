@@ -132,9 +132,12 @@ body {
         top: -40px;
     }
 
-    75% {
+    70% {
         top: -105px;
     }
+    85% {
+        top: -105px
+    } 
 }
 
 .tickets {
