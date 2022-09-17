@@ -127,19 +127,22 @@ body {
 
 @keyframes slide {
     0% {
+        top: 0;
+    }
+    10% {
         top: -1em;
     }
-    25% {
+    20% {
         top: -1.4em;
     }
-    50% {
+    60% {
         top: -4.4em;
     }
-    75% {
+    80% {
         top: -4.6em;
     }
     100% {
-        top: -6em;
+        top: -8em;
     }
 }
 
