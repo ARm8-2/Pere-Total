@@ -138,6 +138,9 @@ body {
     75% {
         top: -4.6em;
     }
+    100% {
+        top: -6em;
+    }
 }
 
 .buybutton {
