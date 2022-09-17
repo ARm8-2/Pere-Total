@@ -20,10 +20,16 @@ body {
     display: flex;
     justify-content: space-between;
 }
+.container {
+    position: relative;
+    padding-bottom: 40px;
+}
+
 .container div {
     color: #f1f1f1;
     padding-left: 25px;
     padding-right: 25px;
+    padding-bottom: 50px;
 }
 
 .navbar-left svg {
@@ -159,7 +165,7 @@ body {
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.8);
     background: rgb(0, 255, 0);
-    padding: 13px 40px;
+    padding: 8px 30px;
     border-color: rgba(241, 241, 241, 0);
 }
 
