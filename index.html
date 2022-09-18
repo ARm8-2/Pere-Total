@@ -12,27 +12,28 @@
 
 <body>
     <div id="sidenav" class="sidenav">
-        <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">&times;</a>
-        <a href="#home" onclick="closeNav()">home</a>
-        <a href="#tickets" onclick="closeNav()">tickets</a>
-        <a href="#about" onclick="closeNav()">about</a>
-        <a href="#contact" onclick="closeNav()">contact</a>
+        <div onclick="closeNav()" href="javascript:void(0)" class="closebtn">&times;</div>
+        <a onclick="scrollTodiv('home')">home</a>
+        <a onclick="scrollTodiv('tickets')">tickets</a>
+        <a onclick="scrollTodiv('about')">about</a>
+        <a onclick="scrollTodiv('contact')">contact</a>
     </div>
 
-    <div class="navbar">
+    <div id="navbar" class="navbar">
         <div class="navbar-left">
-            <svg onclick="openNav()" stroke="currentColor" fill="none"
-                stroke-width="2" viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
+            <svg id="navbar-left" onclick="openNav()" stroke="currentColor" fill="none" stroke-width="2" viewBox="0 0 24 24"
+                stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
                 <line x1="3" y1="12" x2="21" y2="12"></line>
                 <line x1="3" y1="6" x2="21" y2="6"></line>
                 <line x1="3" y1="18" x2="21" y2="18"></line>
             </svg>
         </div>
         <div class="navbar-right">
-            <div class="scroller"><span><br />Follow us <br /><br />@peretotal28_01<br /></span></div>
-            <a href="https://www.instagram.com/peretotal28_01/" target="_blank" rel="noreferrer" aria-label="Follow us on Instagram">
-                <svg stroke="currentColor" fill="currentColor" stroke-width="0"
-                    viewBox="0 0 512 512" xmlns="http://www.w3.org/2000/svg">
+            <div id="scroller" class="scroller"><span><br />Follow us <br /><br />@peretotal28_01<br /></span></div>
+            <a href="https://www.instagram.com/peretotal28_01/" target="_blank" rel="noreferrer"
+                aria-label="Follow us on Instagram">
+                <svg stroke="currentColor" fill="currentColor" stroke-width="0" viewBox="0 0 512 512"
+                    xmlns="http://www.w3.org/2000/svg">
                     <path
                         d="M336 96c21.2 0 41.3 8.4 56.5 23.5S416 154.8 416 176v160c0 21.2-8.4 41.3-23.5 56.5S357.2 416 336 416H176c-21.2 0-41.3-8.4-56.5-23.5S96 357.2 96 336V176c0-21.2 8.4-41.3 23.5-56.5S154.8 96 176 96h160m0-32H176c-61.6 0-112 50.4-112 112v160c0 61.6 50.4 112 112 112h160c61.6 0 112-50.4 112-112V176c0-61.6-50.4-112-112-112z">
                     </path>
@@ -53,7 +54,7 @@
             <h1>Tickets<button class="buybutton" onclick="location.href='https://google.com'">buy</button></h1>
             <p>Tickets coming soon...</p>
         </div>
-        
+
         <div id="about">
             <h1>About</h1>
             <p>More info coming soon...</p>
@@ -66,22 +67,49 @@
     </div>
 
     <footer>
-        <div>Made by ARm8</div>
+        <div style="padding-top: 8px;">Made by ARm8</div>
+        <div style="font-size: 8px; padding-bottom: 8px;">Designed by Henri</div>
     </footer>
+
+    <script>
+        function scrollTodiv(element) {
+            window.scrollTo(0, document.getElementById(element).getBoundingClientRect().top - 60)
+            closeNav()
+        };
+
+        function openNav() {
+            document.getElementById("navbar").style.zIndex="0";
+            document.getElementById("sidenav").style.width = "200px";
+            document.getElementById("scroller").style.height = "0";
+            document.getElementById("navbar-left").style.color = "rgba(0,0,0,0)";
+        };
+
+        function closeNav() {
+            document.getElementById("navbar").style.zIndex="1";
+            document.getElementById("sidenav").style.width = "0";
+            document.getElementById("navbar-left").style.color = "#f1f1f1";
+        };
+
+        window.onbeforeunload = function () {
+            window.scrollTo(0, 0);
+        };
+
+        window.onscroll = function () {
+            if (document.documentElement.scrollTop < 100) {
+                document.getElementById("scroller").style.height = "1.2em";
+            } else if (document.documentElement.scrollTop > 100 && document.documentElement.scrollTop < 350) {
+                document.getElementById("scroller").style.height = "0";
+            } else if (document.documentElement.scrollTop > 350) {
+                document.getElementById("scroller").style.height = "1.2em";
+            } 
+
+            if (document.documentElement.scrollTop > 520) {
+                document.getElementById("navbar").style.backgroundColor="rgba(3,3,3, 1)";
+            } else {
+                document.getElementById("navbar").style.backgroundColor="rgba(3,3,3, 0)";
+            }
+        }
+    </script>
 </body>
-
-<script>
-    function openNav() {
-        document.getElementById("sidenav").style.width = "200px";
-    };
-
-    function closeNav() {
-        document.getElementById("sidenav").style.width = "0";
-    };
-
-    window.onbeforeunload = function () {
-        window.scrollTo(0, 0);
-    };
-</script>
 
 </html>
