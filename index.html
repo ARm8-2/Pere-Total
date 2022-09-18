@@ -42,21 +42,50 @@
             <a onclick="scrollTodiv('home')">home</a>
             <a onclick="scrollTodiv('tickets')">tickets</a>
             <a onclick="scrollTodiv('about')">about</a>
-            <a onclick="scrollTodiv('contact')">contact</a>
+            <a onclick="scrollTodiv('contact')">socials</a>
         </div>
 
         <div id="home" class="home">
             <img alt="Père Total" src="resources/icons/logo.png">
         </div>
+        <div>
+            <svg class="editorial"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+                viewBox="0 24 150 28 "
+                preserveAspectRatio="none">
+                <defs>
+                <path id="gentle-wave"
+                d="M-160 44c30 0 
+                    58-18 88-18s
+                    58 18 88 18 
+                    58-18 88-18 
+                    58 18 88 18
+                    v44h-352z" />
+                </defs>
+                <g class="parallax1">
+                <use xlink:href="#gentle-wave" x="50" y="3" fill="rgba(254, 1, 128, 0.7)"/>
+                </g>
+                    <g class="parallax2">
+                <use xlink:href="#gentle-wave" x="50" y="0" fill="rgba(8, 255, 0, 0.7)"/>
+                    </g>
+                    <g class="parallax3">
+                <use xlink:href="#gentle-wave" x="50" y="9" fill="rgba(0, 47, 254, 0.7)"/>
+                </g>
+                    <g class="parallax4">
+                <use xlink:href="#gentle-wave" x="50" y="6" fill="#131313"/>  
+                </g>
+            </svg>
+        </div>
     </div>
 
     <div class="container">
         <div id="tickets">
-            <h1>Tickets<button class="buybutton" onclick="location.href='https://google.com'">buy</button></h1>
+            <h2>Tickets<button class="buybutton" onclick="location.href='https://google.com'">buy</button></h2>
             <p>Tickets coming soon...</p>
         </div>
 
-        <div id="about">
+        <div id="about" class="about">
             <h1>About</h1>
             <p>More info coming soon...</p>
         </div>
@@ -86,33 +115,29 @@
         </div>
     </div>
 
-    <footer>
-        <div style="padding-top: 8px;">Made by ARm8</div>
-        <div style="font-size: 8px;">Designed by Henri</div>
-        <div style="font-size: 4px; padding-bottom: 8px;">Assisted by Error</div>
-    </footer>
+    <div class="footer">
+        <footer>
+            <div style="padding-top: 8px;">Made by ARm8</div>
+            <div style="font-size: 8px;">Designed by Henri</div>
+            <div style="font-size: 4px; padding-bottom: 8px;">Assisted by Error</div>
+        </footer>
+    </div>
 
     <script>
         function scrollTodiv(element) {
-            window.scrollTo(0, document.getElementById(element).getBoundingClientRect().top - 60)
-            closeNav()
+            window.scrollTo({left: 0, top: document.getElementById(element).getBoundingClientRect().top - 60, behavior: 'smooth'})
+            document.getElementById("checkbox").checked = false;
+            document.getElementById("sidenav").style.width = "0";
         };
 
         function openNav() {
             if (document.getElementById("sidenav").style.width == "200px") {
-                closeNav()
+                document.getElementById("sidenav").style.width = "0";
             }else {
                 document.getElementById("sidenav").style.width = "200px";
                 document.getElementById("scroller").style.height = "0";
                 document.getElementById("navbar-left").style.color = "rgba(0,0,0,0)";
             }
-        };
-
-        function closeNav() {
-            document.getElementById("checkbox").checked = true;
-
-            document.getElementById("sidenav").style.width = "0";
-            document.getElementById("navbar-left").style.color = "#f1f1f1";
         };
 
         window.onbeforeunload = function () {
@@ -128,10 +153,10 @@
                 document.getElementById("scroller").style.height = "1.2em";
             }
 
-            if (document.documentElement.scrollTop > 520) {
-                document.getElementById("navbar").style.backgroundColor = "rgba(3,3,3, 1)";
+            if (document.documentElement.scrollTop > 540) {
+                document.getElementById("navbar").style.backgroundColor = "rgba(19, 19, 19, 1)";
             } else {
-                document.getElementById("navbar").style.backgroundColor = "rgba(3,3,3, 0)";
+                document.getElementById("navbar").style.backgroundColor = "rgba(19, 19, 19, 0)";
             }
         }
     </script>
