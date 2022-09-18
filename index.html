@@ -11,23 +11,27 @@
 </head>
 
 <body>
-    <div id="sidenav" class="sidenav">
-        <div onclick="closeNav()" href="javascript:void(0)" class="closebtn">&times;</div>
-        <a onclick="scrollTodiv('home')">home</a>
-        <a onclick="scrollTodiv('tickets')">tickets</a>
-        <a onclick="scrollTodiv('about')">about</a>
-        <a onclick="scrollTodiv('contact')">contact</a>
-    </div>
-
     <div id="navbar" class="navbar">
-        <div class="navbar-left">
-            <svg id="navbar-left" onclick="openNav()" stroke="currentColor" fill="none" stroke-width="2"
-                viewBox="0 0 24 24" stroke-linecap="round" stroke-linejoin="round" xmlns="http://www.w3.org/2000/svg">
-                <line x1="3" y1="12" x2="21" y2="12"></line>
-                <line x1="3" y1="6" x2="21" y2="6"></line>
-                <line x1="3" y1="18" x2="21" y2="18"></line>
-            </svg>
+
+        <div id="sidenav" class="sidenav">
+            <a onclick="scrollTodiv('home')">home</a>
+            <a onclick="scrollTodiv('tickets')">tickets</a>
+            <a onclick="scrollTodiv('about')">about</a>
+            <a onclick="scrollTodiv('contact')">contact</a>
         </div>
+
+        <div class="navbar-left">
+            <input type="checkbox" id="checkbox" class="checkbox visuallyHidden">
+            <label for="checkbox">
+                <div onclick="openNav()" class="hamburger hamburger">
+                    <span class="bar bar1"></span>
+                    <span class="bar bar2"></span>
+                    <span class="bar bar3"></span>
+                    <span class="bar bar4"></span>
+                </div>
+            </label>
+        </div>
+
         <div class="navbar-right">
             <div id="scroller" class="scroller"><span><br />Follow us <br /><br />@peretotal28_01<br /></span></div>
             <a href="https://www.instagram.com/peretotal28_01/">
@@ -82,7 +86,8 @@
 
     <footer>
         <div style="padding-top: 8px;">Made by ARm8</div>
-        <div style="font-size: 8px; padding-bottom: 8px;">Designed by Henri</div>
+        <div style="font-size: 8px;">Designed by Henri</div>
+        <div style="font-size: 4px; padding-bottom: 8px;">Assisted by Error</div>
     </footer>
 
     <script>
@@ -92,14 +97,19 @@
         };
 
         function openNav() {
-            document.getElementById("navbar").style.zIndex = "0";
-            document.getElementById("sidenav").style.width = "200px";
-            document.getElementById("scroller").style.height = "0";
-            document.getElementById("navbar-left").style.color = "rgba(0,0,0,0)";
+            if (document.getElementById("sidenav").style.width == "200px") {
+                closeNav()
+            }else {
+                document.getElementById("navbar").style.zIndex = "0";
+                document.getElementById("sidenav").style.width = "200px";
+                document.getElementById("scroller").style.height = "0";
+                document.getElementById("navbar-left").style.color = "rgba(0,0,0,0)";
+            }
         };
 
         function closeNav() {
-            document.getElementById("navbar").style.zIndex = "1";
+            document.getElementById("checkbox").checked = true;
+
             document.getElementById("sidenav").style.width = "0";
             document.getElementById("navbar-left").style.color = "#f1f1f1";
         };
