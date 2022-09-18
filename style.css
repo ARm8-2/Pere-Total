@@ -1,4 +1,9 @@
+html{
+    height: 100%;
+    margin: auto;
+}
 body {
+    height: 100%;
     margin: 0px;
     background-color: #0a0a0a;
     font-family: 'Open Sans', sans-serif;
@@ -15,6 +20,7 @@ body {
     box-shadow: 0 -35px 15px -15px #0a0a0a inset;
 }
 .navbar {
+    padding-top: 10px;
     position: fixed;
     width: 100%;
     z-index: 1;
@@ -23,7 +29,6 @@ body {
 }
 .container {
     position: relative;
-    padding-bottom: 40px;
 }
 
 .container div {
@@ -33,19 +38,27 @@ body {
     padding-bottom: 50px;
 }
 
+.container .contact {
+    display: block;
+    text-align: center;
+}
+
+.container .contact svg {
+    padding: 20px;
+}
+
 .navbar-left svg {
     color: #f1f1f1;
     padding-left: 10px;
-    padding-bottom: 2px;
     width: 2.5em;
     transition: 0.8s;
+    margin-bottom: 4px;
 }
 
 .navbar-right svg {
-    padding-right: 5px;
-    padding-top: 3px;
+    padding-right: 10px;
     color: #f1f1f1;
-    width: 3.5em;
+    width: 2.5em;
 }
 
 .navbar-left,
@@ -123,6 +136,7 @@ body {
     line-height: 1.2em;
     position: relative;
     padding-right: 12px;
+    padding-bottom: 8px;
     overflow: hidden;
     width: 6em;
 }
@@ -148,10 +162,10 @@ body {
         top: -1.4em;
     }
     30% {
-        top: -4.4em;
+        top: -4.0em;
     }
     42% {
-        top: -4.6em;
+        top: -4.4em;
     }
     50% {
         top: -8em;
@@ -193,4 +207,8 @@ h1 {
 
 p {
     font-weight: bold;
+}
+
+a {
+    text-decoration: none;
 }
