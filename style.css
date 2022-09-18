@@ -33,18 +33,19 @@ body {
 
 .container div {
     color: #f1f1f1;
-    padding-left: 25px;
-    padding-right: 25px;
-    padding-bottom: 50px;
+    padding-left: 1.5em;
+    padding-right: 1.5em;
+    padding-bottom: 3em;
 }
 
 .container .contact {
     display: block;
     text-align: center;
+    padding-top: 3em;
 }
 
 .container .contact svg {
-    padding: 20px;
+    padding: 2em;
 }
 
 .navbar-left svg {
@@ -53,12 +54,14 @@ body {
     width: 2.5em;
     transition: 0.8s;
     margin-bottom: 4px;
+    animation-delay: 1s;
 }
 
 .navbar-right svg {
     padding-right: 0.7em;
     color: #f1f1f1;
     width: 2.5em;
+    transition: 0.8s;
 }
 
 .navbar-left,
