@@ -81,8 +81,9 @@
 
     <div class="container">
         <div id="tickets">
-            <h2>Tickets<button class="buybutton" onclick="location.href='https://google.com'">buy</button></h2>
-            <p>Tickets coming soon...</p>
+            <h2>Tickets<button class="buybutton" onclick="location.href='https://www.your-tickets.be/events/PereTotal'">buy</button></h2>
+            <p>Tickets zijn beschikbaar vanaf 25 november 2022.</p>
+            <p>Prijs: 6 euro</p>
         </div>
 
         <div id="about" class="about">
@@ -132,10 +133,12 @@
         };
 
         function openNav() {
-            if (document.getElementById("sidenav").style.width == "200px") {
+            if (document.getElementById("sidenav").style.width == "180px") {
                 document.getElementById("sidenav").style.width = "0";
+                document.getElementById("sidenav").style.height = "0";
             }else {
-                document.getElementById("sidenav").style.width = "200px";
+                document.getElementById("sidenav").style.width = "180px";
+                document.getElementById("sidenav").style.height = "200px";
                 document.getElementById("scroller").style.height = "0";
                 document.getElementById("navbar-left").style.color = "rgba(0,0,0,0)";
             }
@@ -152,12 +155,6 @@
                 document.getElementById("scroller").style.height = "0";
             } else if (document.documentElement.scrollTop > 350) {
                 document.getElementById("scroller").style.height = "1.2em";
-            }
-
-            if (document.documentElement.scrollTop > 540) {
-                document.getElementById("navbar").style.backgroundColor = "rgba(19, 19, 19, 1)";
-            } else {
-                document.getElementById("navbar").style.backgroundColor = "rgba(19, 19, 19, 0)";
             }
         }
     </script>
